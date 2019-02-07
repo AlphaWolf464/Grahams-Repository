@@ -1,0 +1,16 @@
+﻿<Properties StartupConfiguration="{1A87952C-1773-D7AB-730F-E2FCC125BFDD}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Player_Code.cs">
+    <Files>
+      <File FileName="Assets/Scripts/Player_Code.cs" Line="29" Column="1" />
+      <File FileName="Assets/Scripts/Grass_Block.cs" Line="52" Column="38" />
+      <File FileName="Assets/Scripts/Wood_Block.cs" Line="21" Column="33" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

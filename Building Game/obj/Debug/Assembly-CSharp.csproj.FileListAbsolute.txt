@@ -1,0 +1,2 @@
+/Users/2022454/Desktop/Grahams-Repository/Building Game/obj/Debug/Assembly-CSharp.csprojAssemblyReference.cache
+/Users/2022454/Desktop/Grahams-Repository/Building Game/obj/Debug/Assembly-CSharp.csproj.CoreCompileInputs.cache
