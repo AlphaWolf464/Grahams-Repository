@@ -68,9 +68,11 @@
     <Compile Include="Assets\SampleScenes\Scripts\ParticleSceneControls.cs" />
     <Compile Include="Assets\SampleScenes\Scripts\PlaceTargetWithMouse.cs" />
     <Compile Include="Assets\SampleScenes\Scripts\SlowMoButton.cs" />
+    <Compile Include="Assets\Scripts\Axe.cs" />
     <Compile Include="Assets\Scripts\Grass_Block.cs" />
     <Compile Include="Assets\Scripts\Player_Code.cs" />
     <Compile Include="Assets\Scripts\Wood_Block.cs" />
+    <Compile Include="Assets\Scripts\WoodBlockInHand.cs" />
     <None Include="Assets\SampleScenes\Shaders\Skybox-Procedural.shader" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>/Users/2022454/Desktop/Grahams-Repository/Building Game/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>

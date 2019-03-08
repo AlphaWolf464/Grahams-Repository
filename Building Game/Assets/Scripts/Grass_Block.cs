@@ -1,7 +1,10 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class Grass_Block : MonoBehaviour
 {
+    public GameObject Grass_Block1;
+
     // Start is called before the first frame update
     private void Start()
     {
@@ -14,66 +17,30 @@ public class Grass_Block : MonoBehaviour
 
     }
 
-    public static Vector3 findPlaceToPutBlock(Grass_Block Grass, bool xFirst, float xPosition, float yPosition, float zPosition)
+    public static Vector3 FindPlaceToPutBlock(int i, float xPosition, float yPosition, float zPosition)
     {
         Vector3 blockPosition;
         blockPosition = new Vector3(xPosition, yPosition, zPosition);
-        if (!Physics.CheckSphere(blockPosition, (float)0.1))
+        for (int j = 0; j < Math.Sqrt(i); j++)
         {
-            return blockPosition;
-        }
-        else
-        {
-            if (xFirst == true)
+            for (int k = 0; k < Math.Sqrt(i); k++)
             {
-                float firstVar = xPosition;
-                float secondVar = zPosition;
-                firstVar = firstVar + 1;
-                while (true)
+                if (!Physics.CheckSphere(blockPosition, (float)0.5))
                 {
-                    blockPosition = new Vector3(firstVar, yPosition, secondVar);
-                    if (!Physics.CheckSphere(blockPosition, (float)0.1))
-                    {
-                        return blockPosition;
-                    }
-                    secondVar = secondVar + 1;
-                    firstVar = firstVar - 1;
-                    blockPosition = new Vector3(firstVar, yPosition, secondVar);
-                    if (!Physics.CheckSphere(blockPosition, (float)0.1))
-                    {
-                        Player_Code.Changebool(xFirst);
-                        secondVar = secondVar - 1;
-                        return blockPosition;
-                    }
+                    return blockPosition;
                 }
+                blockPosition.Set(blockPosition.x, blockPosition.y, blockPosition.z + 2);
             }
-            else
-            {
-                float firstVar = zPosition;
-                float secondVar = xPosition;
-                firstVar = firstVar + 1;
-                while (true)
-                {
-                    blockPosition = new Vector3(firstVar, yPosition, secondVar);
-                    if (!Physics.CheckSphere(blockPosition, (float)0.1))
-                    {
-                        return blockPosition;
-                    }
-                    secondVar = secondVar + 1;
-                    firstVar = firstVar - 1;
-                    blockPosition = new Vector3(firstVar, yPosition, secondVar);
-                    if (!Physics.CheckSphere(blockPosition, (float)0.1))
-                    {
-                        firstVar = 0;
-                        secondVar = 0;
-                        while (!Physics.CheckSphere(blockPosition, (float)0.1))
-                        {
-                            firstVar = firstVar + 1;
-                        }
-                        blockPosition = new Vector3(firstVar, yPosition, secondVar);
-                    }
-                }
-            }
+            xPosition = xPosition + 2;
+            blockPosition.Set(xPosition, blockPosition.y, zPosition);
         }
+        blockPosition.Set((float)0.0, (float)0.0, (float)0.0);
+        return blockPosition;
     }
-}  
+
+    public static Vector3 GetGrassBlock(GameObject highlightedBlock)
+    {
+        Vector3 blockCenter = highlightedBlock.transform.position;
+        return blockCenter;
+    }
+}
